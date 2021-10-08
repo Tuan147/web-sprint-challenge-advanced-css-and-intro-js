@@ -252,8 +252,10 @@ If correct, the function should return ["Salvador Dali", "Frida Kahlo"]*/
 
 function get20s(array) {
   let results = [];
-  if (array.years > 1900 && array.years < 2000){
-    array['names'].split();
+  for (let i =0; i < array.length; i++){
+  if (array[i]['years'] > 1900 && array[i]['years'] < 2000){
+    results.split(array[i]['name'])
+    }
   }
   return results;
 }
@@ -317,11 +319,13 @@ Use lotsOfArt to do the following:
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
 function lotsOfArt(array) {
+  const paints = []
   for (let i = 0; i < array.length; i++){
     if (array[i]['paintings'] > 100) {
-      return array['names'];
+      paints.push(array[i]['name'])
     }
   }
+  return paints;
 }
 
 
